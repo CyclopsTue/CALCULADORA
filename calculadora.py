@@ -19,13 +19,21 @@ print("""
 \033[1;96m_____________________________________________________________________
 
 \033[1;95mCriador : Near Shelby
-\033[1;96m_____________________________________________________________________""")
+\033[1;96m_____________________________________________________________________
+
+\033[1;95m+ = Adicao
+- = Subtração
+* = Multiplicação
+/ = Divisão
+** = Potência
+\033[1;96m_____________________________________________________________________
+""")
 
 while True:
-    operacao = input('\033[1;96mQual operação \033[1;95m(+,-,*,/) \033[1;96mvocê quer fazer ? ou  \033[1;95m\'n\' \033[1;96mpara sair? \033[1;95m$ ')
+    operacao = input('\033[1;96mQual operação \033[1;95m(+,-,*,/,**) \033[1;96mvocê quer fazer ? ou  \033[1;95m\'n\' \033[1;96mpara sair? \033[1;95m$ ')
     if operacao == 'n' or operacao == 'N':
         break
-    elif operacao == '+' or operacao == '-' or operacao == '*' or operacao == '/':
+    elif operacao == '+' or operacao == '-' or operacao == '*' or operacao == '/' or operacao == '**':
         num1 = int(input('\033[1;96mDigite o primeiro numero \033[1;95m$ '))
         num2 = int(input('\033[1;96mDigite o segundo numero  \033[1;95m$ '))
     else:
@@ -42,4 +50,7 @@ while True:
         print(total)
     elif operacao == '/':
         total = num1 / num2
+        print(total)
+    elif operacao == '**':
+        total = num1 ** num2
         print(total)
